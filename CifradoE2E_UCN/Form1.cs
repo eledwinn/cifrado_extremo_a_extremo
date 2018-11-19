@@ -56,12 +56,20 @@ namespace CifradoE2E_UCN
 
         private void btnDescifrar_Click(object sender, EventArgs e)
         {
+            // Tomar los datos cifrados y pasarlos a bytes[]
             byte[] datosEncriptados = representarStringABytes(txtMensajeADecifrar.Text);
+            // Desencriptar los datos usando la instancia RSA ya generada,
+            // esta instancia contiene la clave privada almacenada en memoria.
             byte[] datosDesencriptados = RSA.Decrypt(datosEncriptados, false);
+            // Mostrar el mensaje descifrado
             txtMensajeACifrar.Text = Encoding.Default.GetString(datosDesencriptados);
         }
 
-
+        /// <summary>
+        /// Obtiene una representación en texto de un arreglo bytes
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         private string representarBytesAString(byte[] datos)
         {
             StringBuilder datosEnString = new StringBuilder();
@@ -72,6 +80,11 @@ namespace CifradoE2E_UCN
             return datosEnString.ToString();
         }
 
+        /// <summary>
+        /// Obtiene bytes representados en una cadena de texto como bytes separados por coma
+        /// </summary>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         private byte[] representarStringABytes(string datos)
         {
             string[] numericos = datos.Split(new char[] { ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);

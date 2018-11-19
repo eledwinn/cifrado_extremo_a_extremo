@@ -45,7 +45,7 @@
             this.txtClavePublicaEsteExtremo.Location = new System.Drawing.Point(9, 28);
             this.txtClavePublicaEsteExtremo.Name = "txtClavePublicaEsteExtremo";
             this.txtClavePublicaEsteExtremo.ReadOnly = true;
-            this.txtClavePublicaEsteExtremo.Size = new System.Drawing.Size(327, 61);
+            this.txtClavePublicaEsteExtremo.Size = new System.Drawing.Size(403, 61);
             this.txtClavePublicaEsteExtremo.TabIndex = 0;
             this.txtClavePublicaEsteExtremo.Text = "";
             // 
@@ -105,7 +105,7 @@
             // 
             this.txtClavePublicaOtroExtremo.Location = new System.Drawing.Point(9, 115);
             this.txtClavePublicaOtroExtremo.Name = "txtClavePublicaOtroExtremo";
-            this.txtClavePublicaOtroExtremo.Size = new System.Drawing.Size(327, 61);
+            this.txtClavePublicaOtroExtremo.Size = new System.Drawing.Size(403, 61);
             this.txtClavePublicaOtroExtremo.TabIndex = 6;
             this.txtClavePublicaOtroExtremo.Text = "";
             // 
@@ -145,7 +145,7 @@
             this.Controls.Add(this.txtMensajeACifrar);
             this.Controls.Add(this.txtClavePublicaEsteExtremo);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Prueba de concepto E2E - by Edwin Gómez";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
